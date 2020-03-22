@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# -ne 2 ]; then
+if [ $# -ne 1 ]; then
     echo "Invalid number of arguments"
     exit 1
 fi
@@ -11,8 +11,10 @@ if [ ! -d $1 ]; then
 fi
 
 for file in $(ls -A $1); do
-    if [ ! -s $1/$file ] && [ -f $1/$file ]; then
-        rm $1/$file
-        echo "$1/$file" >> $1/$2
+    if [ -d $1/$file ]; then
+        for nested_file in $(ls -A $1/$file); do
+            mv $1/$file/$nested_file $1
+        done
+        rmdir $1/$file
     fi
 done
