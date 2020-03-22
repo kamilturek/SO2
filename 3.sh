@@ -12,7 +12,7 @@ fi
 
 for file in $(ls -A $1); do
     if [ ! -x $1/$file ]; then
-        if [ -d $1/$file ] && [ -z "$(ls -A $file)" ]; then
+        if [ -d $1/$file ] && [ -z "$(ls -A $1/$file)" ]; then
             rmdir $1/$file
         elif [ -f $1/$file ]; then
             rm $1/$file
