@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# -ne 2 ]; then
+if [ $# -ne 3 ]; then
     echo "Invalid number of arguments"
     exit 1
 fi
@@ -15,6 +15,11 @@ if [ ! -f $2 ]; then
     exit 1
 fi
 
+echo -n > $3
+
 for file in $(cat $2); do
-    touch $1/$file
+    if [ -f $file ]; then
+        echo -e "$file\n" >> $3
+        cat $file >> $3
+    fi
 done
