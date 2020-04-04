@@ -1,0 +1,1 @@
+Sprawdzić, czy zadane dowiązanie symboliczne (argument skryptu) wskazuje na podany obiekt. Rozwiązanie bazujące na porównaniu numerów inode'ów jest niewystarczające!
