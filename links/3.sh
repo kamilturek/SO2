@@ -11,7 +11,7 @@ if [ ! -d $1 ]; then
 fi
 
 for file in $(ls -A $1); do
-    if [ -h $1/$file ]; then
+    if [ -h $1/$file ] && [ $(realpath $1/$file) != $(readlink $1/$file) ]; then
         ln -fs $(readlink -m $1/$file) $1/$file
     fi
 done
