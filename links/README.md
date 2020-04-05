@@ -8,4 +8,8 @@
 
 4. W zadanym katalogu przerobić wszystkie dowiązania twarde (pliki regularne) na dowiązania symboliczne.
 
-4. Utworzyć kopię zadanego katalogu, przy czym dowiązania symboliczne, wskazujące na obiekty w katalogu, powinny w kopii wskazywać na kopie obiektów, natomiast dowiązania symboliczne wskazujące poza katalog powinny w kopii wskazywać na oryginalny obiekt. Podkatalogów nie należy kopiować (tylko pliki regularne i dowiązania).
+5. Utworzyć kopię zadanego katalogu, przy czym dowiązania symboliczne, wskazujące na obiekty w katalogu, powinny w kopii wskazywać na kopie obiektów, natomiast dowiązania symboliczne wskazujące poza katalog powinny w kopii wskazywać na oryginalny obiekt. Podkatalogów nie należy kopiować (tylko pliki regularne i dowiązania).
+
+6. Skopiować zadane drzewo katalogów w zadane miejsce, uwzględniając pliki regularne, podkatalogi oraz dowiązania symboliczne. Dowiązania symboliczne w kopii powinny wskazywać na pierwotne obiekty.
+
+7. W zadanym drzewie katalogów znaleźć katalogi zawierające mniej niż $2 (zadany parametr), a więcej lub równo $3 podkatalogi. Skrypt musi uwzględniać ostrość nierówności!
