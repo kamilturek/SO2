@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# -ne 1 ]; then
+if [ $# -ne 2 ]; then
     echo "Invalid number of arguments"
     exit 1
 fi
@@ -10,4 +10,4 @@ if [ ! -d "$1" ]; then
     exit 1
 fi
 
-find "$1" -type d -perm -500 -perm /022 -print
+find "$1" -type l -exec test -f {} \; -mmin +5 -mmin -"$2" -print

@@ -10,7 +10,5 @@
 
 5. Utworzyć kopię zadanego katalogu, przy czym dowiązania symboliczne, wskazujące na obiekty w katalogu, powinny w kopii wskazywać na kopie obiektów, natomiast dowiązania symboliczne wskazujące poza katalog powinny w kopii wskazywać na oryginalny obiekt. Podkatalogów nie należy kopiować (tylko pliki regularne i dowiązania).
 
-6. Skopiować zadane drzewo katalogów w zadane miejsce, uwzględniając pliki regularne, podkatalogi oraz dowiązania symboliczne. Dowiązania symboliczne w kopii powinny wskazywać na pierwotne obiekty.
-
-7. Dla dowolnych dwóch katalogów (argumenty skryptu), zastąpić w drugim wszystkie dowiązania twarde, wspólne dla obu katalogów, dowiązaniami symbolicznymi.
+6. Dla dowolnych dwóch katalogów (argumenty skryptu), zastąpić w drugim wszystkie dowiązania twarde, wspólne dla obu katalogów, dowiązaniami symbolicznymi.
 

@@ -15,21 +15,15 @@ if [ ! -d $2 ]; then
     exit 1
 fi
 
-copy_dir() {
-    # $1 - source directory
-    # $2 - target directory
+if [ $(realpath $1) = $(realpath $2) ]; then
+    echo "Arguments are the same file"
+    exit 1
+fi
 
-    for file in $(ls -A $1); do
-        if [ -d $1/$file ]; then
-            mkdir $2/$file
-            copy_dir $1/$file $2/$file
-        elif [ -h $1/$file ]; then
-            ln -s $(readlink -m $1/$file) $2/$file
-        elif [ -f $1/$file ]; then
-            cp $1/$file $2/$file
+for i in $(ls -A $1); do
+    for j in $(ls -A $2); do
+        if [ $1/$i -ef $2/$j ]; then
+            ln -fs $(realpath $1/$i) $2/$j
         fi
     done
-}
-
-mkdir $2/$(basename $1)
-copy_dir $1 $2/$(basename $1)
+done
