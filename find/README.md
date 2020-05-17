@@ -12,3 +12,5 @@ podkatalogi. Skrypt musi uwzględniać ostrość nierówności!
 4. W zadanym drzewie katalogów znaleźć dowiązania symboliczne wskazujące na pliki regularne, zmodyfikowane nie wcześniej niż 5 minut temu i nie później niż $2 (argument skryptu) minut temu.
 
 5. Skopiować zadane drzewo katalogów w zadane miejsce, uwzględniając pliki regularne, podkatalogi oraz dowiązania symboliczne. Dowiązania symboliczne w kopii powinny wskazywać na pierwotne obiekty.
+
+6. Napisz skrypt, który przeszuka zadane miejsce w systemie plików (parametr wywołania skryptu), o ile ono istnieje, i wyświetli wszystkie istniejące w tym miejscu (i jego ewentualnych podkatalogach) dowiązania twarde i miękkie do wskazanego pliku (parametr wywołania skryptu).
