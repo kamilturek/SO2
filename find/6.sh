@@ -15,4 +15,4 @@ if [ ! -e "$2" ]; then
     exit 1
 fi
 
-find -L "$1" -samefile "$2"
+find -L "$1" -samefile "$2" -print
