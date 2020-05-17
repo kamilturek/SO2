@@ -10,4 +10,4 @@ if [ ! -d "$1" ]; then
     exit 1
 fi
 
-find "$1" -type d -perm -500 -perm /022 -print
+find "$1" -type d ! -perm -500 -perm /022 -print
