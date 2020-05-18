@@ -14,3 +14,5 @@ podkatalogi. Skrypt musi uwzględniać ostrość nierówności!
 5. Skopiować zadane drzewo katalogów w zadane miejsce, uwzględniając pliki regularne, podkatalogi oraz dowiązania symboliczne. Dowiązania symboliczne w kopii powinny wskazywać na pierwotne obiekty.
 
 6. Napisz skrypt, który przeszuka zadane miejsce w systemie plików (parametr wywołania skryptu), o ile ono istnieje, i wyświetli wszystkie istniejące w tym miejscu (i jego ewentualnych podkatalogach) dowiązania twarde i miękkie do wskazanego pliku (parametr wywołania skryptu).
+
+7. Napisz skrypt, który z zadanego miejsca systemu plików (parametr wywołania skryptu), uwzględniając wszystkie możliwe podkatalogi, wypisze ścieżki do N (opcjonalny parametr wywołania skryptu; domyślnie 10) największych (pod względem rozmiaru w bajtach) plików.
