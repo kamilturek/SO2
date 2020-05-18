@@ -26,9 +26,10 @@ if __name__ == '__main__':
             filename = filename.strip('\n')
             filepath = os.path.join(dirpath, filename)
 
-            if os.path.isfile(filepath):
-                os.chmod(filepath, stat.S_IRUSR | stat.S_IRGRP | stat.S_IROTH)
-            elif os.path.exists(filepath):
-                print(f'{filename}: file already exists and is not a regular file')
+            if os.path.exists(filepath):
+                if os.path.isfile(filepath) and not os.path.islink(filepath):
+                    os.chmod(filepath, stat.S_IRUSR | stat.S_IRGRP | stat.S_IROTH)
+                else:
+                    print(f'{filename}: file already exists and is not a regular file')
             else:
                 os.mknod(filepath)
