@@ -13,11 +13,11 @@ if __name__ == '__main__':
     dest = os.path.abspath(os.path.normpath(sys.argv[2]))
 
     if not os.path.isdir(src):
-        print(f'{src}: nie istnieje lub nie jest katalogiem')
+        print(f'{src}: file does not exist or is not a directory')
         sys.exit(2)
 
     if os.path.exists(dest):
-        print(f'{dest}: juz istnieje')
+        print(f'{dest}: file already exists')
         sys.exit(3)
 
     os.mkdir(dest)
